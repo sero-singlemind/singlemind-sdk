@@ -1,6 +1,6 @@
 {
   "name": "singlemind-sdk",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "SingleMind SDK for interacting with Serotonin's portfolio and wallet services",
   "type": "module",
   "main": "dist/singlemind-sdk.umd.js",
