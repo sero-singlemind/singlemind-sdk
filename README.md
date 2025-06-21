@@ -15,9 +15,9 @@ A React SDK for interacting with Serotonin's SingleMind wallet and portfolio ser
 ## Installation
 
 ```bash
-npm install @serotonin/single-mind-sdk
+npm install singlemind-sdk
 # or
-yarn add @serotonin/single-mind-sdk
+yarn add singlemind-sdk
 ```
 
 ## Usage
@@ -27,7 +27,7 @@ yarn add @serotonin/single-mind-sdk
 Wrap your application with the `SingleMindProvider`:
 
 ```tsx
-import { SingleMindProvider } from '@serotonin/single-mind-sdk';
+import { SingleMindProvider } from 'singlemind-sdk';
 
 function App() {
   return (
@@ -44,7 +44,7 @@ function App() {
 ### Using the Wallet Profile Hook
 
 ```tsx
-import { useSingleMindWalletProfile } from '@serotonin/single-mind-sdk';
+import { useSingleMindWalletProfile } from 'singlemind-sdk';
 
 function WalletProfile() {
   const { fetchWalletProfile, isLoading } = useSingleMindWalletProfile();

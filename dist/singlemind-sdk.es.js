@@ -1,21 +1,22 @@
-import { createContext as E, useContext as l, useState as h } from "react";
-import S from "axios";
-const i = E(void 0), x = ({ children: e, clientId: a, apiEndpoint: d }) => /* @__PURE__ */ React.createElement(i.Provider, { value: { clientId: a, apiEndpoint: d } }, e);
-function y() {
+import { jsx as h } from "react/jsx-runtime";
+import { createContext as E, useContext as l, useState as S } from "react";
+import v from "axios";
+const i = E(void 0), M = ({ children: e, clientId: a, apiEndpoint: d }) => /* @__PURE__ */ h(i.Provider, { value: { clientId: a, apiEndpoint: d }, children: e });
+function O() {
   const e = l(i);
   if (!e)
     throw new Error("useSingleMind must be used within an SingleMindProvider");
   return e;
 }
-const v = () => {
+const w = () => {
   const e = l(i);
   if (!e) throw new Error("useClientId must be used within SingleMindProvider");
   return e.clientId;
-}, w = () => {
+}, P = () => {
   const e = l(i);
   if (!e) throw new Error("useApiEndpoint must be used within SingleMindProvider");
   return e.apiEndpoint;
-}, P = `
+}, I = `
 query PortfolioData($address: String!, $clientId: String!) {
   getPortfolio(
     data: {
@@ -50,8 +51,8 @@ query PortfolioData($address: String!, $clientId: String!) {
     walletAddress
   }
 }
-`, M = () => {
-  const e = v(), a = w(), [d, c] = h(!1);
+`, T = () => {
+  const e = w(), a = P(), [d, c] = S(!1);
   return {
     fetchWalletProfile: async (o) => {
       var u, f;
@@ -69,10 +70,10 @@ query PortfolioData($address: String!, $clientId: String!) {
         clientId: e
       };
       try {
-        const t = await S.post(
+        const t = await v.post(
           g,
           {
-            query: P,
+            query: I,
             variables: m
           },
           {
@@ -105,8 +106,8 @@ query PortfolioData($address: String!, $clientId: String!) {
   };
 };
 export {
-  x as SingleMindProvider,
-  y as useSingleMind,
-  M as useSingleMindWalletProfile
+  M as SingleMindProvider,
+  O as useSingleMind,
+  T as useSingleMindWalletProfile
 };
 //# sourceMappingURL=singlemind-sdk.es.js.map

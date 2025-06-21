@@ -5,9 +5,7 @@ import dts from 'vite-plugin-dts';
 
 export default defineConfig({
   plugins: [
-    react({
-      jsxRuntime: 'classic',
-    }),
+    react(),
     dts({
       insertTypesEntry: true,
       include: ['src/**/*'],
@@ -30,9 +28,9 @@ export default defineConfig({
           react: 'React',
           'react-dom': 'ReactDOM',
           'react/jsx-runtime': 'jsxRuntime',
-          axios: 'axios',
-        },
-      },
+          axios: 'axios'
+        }
+      }
     },
   },
   resolve: {

@@ -1,5 +1,5 @@
 {
-  "name": "@sero-singlemind/sdk",
+  "name": "singlemind-sdk",
   "version": "0.1.0",
   "description": "SingleMind SDK for interacting with Serotonin's portfolio and wallet services",
   "type": "module",
@@ -26,8 +26,8 @@
     "coverage": "vitest run --coverage"
   },
   "peerDependencies": {
-    "react": "^18.0.0 || ^19.0.0",
-    "react-dom": "^18.0.0 || ^19.0.0"
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
   },
   "dependencies": {
     "axios": "^1.6.7",
@@ -53,13 +53,5 @@
     "sdk",
     "single-mind"
   ],
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/your-username/single-mind-sdk.git"
-  },
-  "bugs": {
-    "url": "https://github.com/your-username/single-mind-sdk/issues"
-  },
-  "homepage": "https://github.com/your-username/single-mind-sdk#readme"
+  "license": "MIT"
 }
