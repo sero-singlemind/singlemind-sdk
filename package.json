@@ -1,5 +1,5 @@
 {
-  "name": "@serotonin/single-mind-sdk",
+"name": "@prozeb/single-mind-sdk",
   "version": "0.1.0",
   "description": "SingleMind SDK for interacting with Serotonin's portfolio and wallet services",
   "type": "module",
