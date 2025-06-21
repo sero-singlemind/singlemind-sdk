@@ -33,7 +33,7 @@ function App() {
   return (
     <SingleMindProvider 
       clientId="YOUR_CLIENT_ID" 
-      apiEndpoint="https://api.your-service.com/graphql"
+      apiEndpoint="https://api.singlemind.pro/graphql"
     >
       <YourApp />
     </SingleMindProvider>
