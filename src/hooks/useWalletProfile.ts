@@ -114,7 +114,8 @@ export const useSingleMindWalletProfile = () => {
     } catch (error) {
       const axiosError = error as AxiosError;
       let errorMessage = 'Failed to fetch wallet profile';
-      let errorCode = 'UNKNOWN_ERROR';
+      let errorCode = (error instanceof Error) ? error.message : 
+                         (typeof error === 'string') ? error : 'UNKNOWN_ERROR';
 
       if (axiosError.response) {
         // The request was made and the server responded with a status code
@@ -130,8 +131,9 @@ export const useSingleMindWalletProfile = () => {
         errorCode = 'TIMEOUT';
       }
 
-      //throw error
-      throw new Error(errorMessage);    
+      const errorWithCode = new Error(errorMessage) as Error & { code?: string };
+      errorWithCode.code = errorCode;
+      throw errorWithCode;
      
     } finally {
       setLoading(false);
